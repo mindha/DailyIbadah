@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UBAH LOKASI"
+                android:background="#EEEEEE"
+                android:padding="@dimen/margin20"
+                android:textColor="#757575"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/ubah_lokasi"
+                android:padding="@dimen/margin20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#757575"
+                android:text="Lokasi saat ini"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PILIH METODE KALKULASI"
+                android:background="#EEEEEE"
+                android:padding="@dimen/margin20"
+                android:textColor="#757575"
+                android:textSize="12dp"/>
+
+
+            <ListView
+                android:id="@+id/listKalkulasi"
+                android:layout_width="fill_parent"
+                android:layout_height="265dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PILIH METODE JURISTIK"
+                android:background="#EEEEEE"
+                android:padding="@dimen/margin20"
+                android:textColor="#757575"
+                android:textSize="12dp"/>
+
+
+            <ListView
+                android:id="@+id/listJuristik"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

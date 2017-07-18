@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">DailyIbadah</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">ALAMAT EMAIL</string>
+    <string name="prompt_password">KATA SANDI</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="desc_login">DiaryIbadah membantu anda mencatat dan memantau progress kegiatan ibadah</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="google">GOOGLE</string>
+    <string name="lupa_pass">LUPA PASSWORD?</string>
+    <string name="belum_punya_akun">BELUM PUNYA AKUN?</string>
+    <string name="sudah_punya_akun">SUDAH PUNYA AKUN?</string>
+    <string name="daftar_sekarang">DAFTAR SEKARANG</string>
+    <string name="login">LOGIN</string>
+
+
+    <!-- On Boarding -->
+    <string name="kosong"> </string>
+    <string name="skip">MULAI</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Catat Ibadah Harian</string>
+    <string name="slide_1_desc">Catat semua ibadah shalat, puasa dan sedekah anda setiap hari</string>
+
+    <string name="slide_2_title">Tingkatkan Keistiqomahan</string>
+    <string name="slide_2_desc">Cek statistik keistiqomahan dan progress ibadah anda dari waktu ke waktu</string>
+
+    <string name="slide_3_title">Alarm Ibadah Otomatis</string>
+    <string name="slide_3_desc">DiaryIbadah akan mengingatkan jadwal ibadah anda secara otomatis</string>
+
+    <string name="nama_depan">NAMA DEPAN</string>
+    <string name="nama_belakang">NAMA BELAKANG</string>
+    <string name="jenis_kelamin">JENIS KELAMIN</string>
+    <string name="kata_sandi">KATA SANDI</string>
+    <string name="ulangi_kata_sandi">ULANGI KATA SANDI</string>
+    <string name="daftar">DAFTAR</string>
+
+    <string name="selamat_datang">Selamat Datang, </string>
+    <string name="desc_loc">Untuk mendapatkan jadwal sholat harian secara otomatis, silahkan atur lokasi anda saat ini</string>
+    <string name="set_location_otomatis">SET LOKASI OTOMATIS</string>
+    <string name="set_location_manual">PILIH LOKASI MANUAL</string>
+    <string name="title_activity_menu_ibadah">MenuIbadah</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+</resources>

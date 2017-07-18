@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ibadah"
+            android:icon="@drawable/ic_daily_ibadah"
+            android:title="Ibadah" />
+        <item
+            android:id="@+id/nav_grafik"
+            android:icon="@drawable/ic_daily_ibadah"
+            android:title="Grafik Istiqomah" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_daily_ibadah"
+            android:title="Info Ibadah" />
+        <item
+            android:id="@+id/nav_notifikasi"
+            android:icon="@drawable/ic_daily_ibadah"
+            android:title="Notifikasi" />
+        <item
+            android:id="@+id/nav_pengaturan"
+            android:icon="@drawable/ic_daily_ibadah"
+            android:title="Pengaturan" />
+    </group>
+
+    <item
+        android:id="@+id/sinkron"
+        android:title="Sinkronisasi Terakhir" />
+
+    <item android:title="" android:actionLayout="@layout/activity_main">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:title="KELUAR"
+                />
+
+        </menu>
+    </item>
+
+</menu>
