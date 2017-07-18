@@ -4,7 +4,7 @@ package kukila.dailyibadah.Adapter.model;
  * Created by Mindha on 17/07/2017.
  */
 
-public class IbadahSunnahModel {
+public class IbadahWajibModel {
     int id;
     String namaIbadah, waktu, menit;
 
@@ -32,7 +32,7 @@ public class IbadahSunnahModel {
         this.menit = menit;
     }
 
-    public IbadahSunnahModel(int id, String namaIbadah, String waktu, String menit) {
+    public IbadahWajibModel(int id, String namaIbadah, String waktu, String menit) {
 
         this.id = id;
         this.namaIbadah = namaIbadah;
@@ -40,7 +40,7 @@ public class IbadahSunnahModel {
         this.menit = menit;
     }
 
-    public IbadahSunnahModel(String namaIbadah) {
+    public IbadahWajibModel(String namaIbadah) {
         this.namaIbadah = namaIbadah;
     }
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/itemInfo"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/icon_ibadah"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon"
+
+            />
+
+        <LinearLayout
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/nama_ibadah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shalat Wajib"
+                android:textColor="@color/abuDark"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/waktu_ibadah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beberapa Menit yang lalu"
+                android:textColor="@color/abuSedang"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                />
+
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/time_ibadah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12.00"
+            android:layout_gravity="center_vertical|end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"
+            android:layout_marginRight="@dimen/margin20"
+            android:textAlignment="textEnd"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -13,8 +13,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import kukila.dailyibadah.Adapter.IbadahSunnahAdapter;
+import kukila.dailyibadah.Adapter.IbadahWajibAdapter;
 import kukila.dailyibadah.Adapter.InfoAdapter;
 import kukila.dailyibadah.Adapter.model.IbadahSunnahModel;
+import kukila.dailyibadah.Adapter.model.IbadahWajibModel;
 import kukila.dailyibadah.Adapter.model.InfoModel;
 import kukila.dailyibadah.R;
 
@@ -26,29 +28,23 @@ public class Notifikasi extends Fragment {
     View myView;
     private static IbadahSunnahAdapter adapter;
     ArrayList<IbadahSunnahModel> dataModels;
-    ListView listViewMessage;
+    private static IbadahWajibAdapter adapteribadahwajib;
+    ArrayList<IbadahWajibModel> dataModelsWajib;
+    ListView listViewIbadahSunnah, listViewIbadahWajib;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.fragment_notifikasi, container, false);
         getActivity().setTitle("Notifikasi");
-        listViewMessage = (ListView) myView.findViewById(R.id.listShalatSunnah);
-        shalatWajib();
+        listViewIbadahSunnah = (ListView) myView.findViewById(R.id.listShalatSunnah);
+        listViewIbadahWajib = (ListView) myView.findViewById(R.id.listShalatWajib);
+        dummyWajib();
+        initAdapterWajib();
         dummySunnah();
         initAdapter();
-
         return myView;
 
-    }
-
-    public void shalatWajib() {
-        String[] listArray = {"Subuh", "Dhuhur", "Ashar", "Maghrib", "Isya"};
-
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.item_shalat_wajib, listArray);
-
-        ListView listView = (ListView) myView.findViewById(R.id.listShalatWajib);
-        listView.setAdapter(adapter);
     }
 
     public void dummySunnah() {
@@ -61,11 +57,32 @@ public class Notifikasi extends Fragment {
 
     public void initAdapter() {
         adapter = new IbadahSunnahAdapter(dataModels, getActivity().getApplicationContext());
-        listViewMessage.setAdapter(adapter);
-        listViewMessage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listViewIbadahSunnah.setAdapter(adapter);
+        listViewIbadahSunnah.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 IbadahSunnahModel dataModel = dataModels.get(position);
+
+            }
+        });
+
+    }
+
+    public void dummyWajib() {
+        dataModelsWajib = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            dataModelsWajib.add(new IbadahWajibModel("Shalat Wajib " + (i + 1)));
+        }
+    }
+
+
+    public void initAdapterWajib() {
+        adapteribadahwajib = new IbadahWajibAdapter(dataModelsWajib, getActivity().getApplicationContext());
+        listViewIbadahWajib.setAdapter(adapteribadahwajib);
+        listViewIbadahWajib.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                IbadahWajibModel dataModel = dataModelsWajib.get(position);
 
             }
         });

@@ -12,54 +12,54 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import kukila.dailyibadah.Adapter.model.IbadahSunnahModel;
+import kukila.dailyibadah.Adapter.model.IbadahWajibModel;
 import kukila.dailyibadah.R;
 
 /**
  * Created by Mindha on 18/06/2017.
  */
 
-public class IbadahSunnahAdapter extends ArrayAdapter<IbadahSunnahModel> {
+public class IbadahWajibAdapter extends ArrayAdapter<IbadahWajibModel> {
     private int lastPosition = -1;
     Switch switchButton;
-    private ArrayList<IbadahSunnahModel> dataSet;
+    private ArrayList<IbadahWajibModel> dataSet;
     Context mContext;
     private static class ViewHolder {
-        TextView textJudulIbadahSunah;
-        LinearLayout itemIbadahSunnah;
+        TextView textJudulIbadahWajib;
+        LinearLayout itemIbadahWajib;
 
     }
-    IbadahSunnahAdapter.ViewHolder viewHolder;
-    public IbadahSunnahAdapter(ArrayList<IbadahSunnahModel> data, Context context) {
-        super(context, R.layout.item_shalat_sunnah, data);
+    IbadahWajibAdapter.ViewHolder viewHolder;
+    public IbadahWajibAdapter(ArrayList<IbadahWajibModel> data, Context context) {
+        super(context, R.layout.item_shalat_wajib, data);
         this.dataSet = data;
         this.mContext=context;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        IbadahSunnahModel dataModel = getItem(position);
+        IbadahWajibModel dataModel = getItem(position);
         final View result;
         if (convertView == null) {
-            viewHolder = new IbadahSunnahAdapter.ViewHolder();
+            viewHolder = new IbadahWajibAdapter.ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            convertView = inflater.inflate(R.layout.item_shalat_sunnah, parent, false);
-            viewHolder.itemIbadahSunnah= (LinearLayout) convertView.findViewById(R.id.item_ibadah_sunnah);
-            viewHolder.textJudulIbadahSunah= (TextView) convertView.findViewById(R.id.judul_ibadah_sunnah);
+            convertView = inflater.inflate(R.layout.item_shalat_wajib, parent, false);
+            viewHolder.itemIbadahWajib= (LinearLayout) convertView.findViewById(R.id.item_ibadah_wajib);
+            viewHolder.textJudulIbadahWajib= (TextView) convertView.findViewById(R.id.judul_ibadah_wajib);
 
             result=convertView;
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (IbadahSunnahAdapter.ViewHolder) convertView.getTag();
+            viewHolder = (IbadahWajibAdapter.ViewHolder) convertView.getTag();
             result=convertView;
         }
 
         lastPosition = position;
 
-        viewHolder.itemIbadahSunnah.setVisibility(View.VISIBLE);
-        viewHolder.textJudulIbadahSunah.setText(dataModel.getNamaIbadah());
+        viewHolder.itemIbadahWajib.setVisibility(View.VISIBLE);
+        viewHolder.textJudulIbadahWajib.setText(dataModel.getNamaIbadah());
 
-        switchButton = (Switch) convertView.findViewById(R.id.switchButton);
+        switchButton = (Switch) convertView.findViewById(R.id.switchButtonWajib);
 //        textView = (TextView) convertView.findViewById(R.id.textView);
 
         switchButton.setChecked(true);
