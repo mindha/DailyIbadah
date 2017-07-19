@@ -1,7 +1,9 @@
 package kukila.dailyibadah.NavbarMenu;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import kukila.dailyibadah.BarMenu.ListIbadah;
 import kukila.dailyibadah.BarMenu.Puasa;
@@ -22,7 +25,7 @@ import kukila.dailyibadah.R;
 
 public class Ibadah extends Fragment {
     View v;
-
+    TabLayout tabLayout;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     @Override
@@ -36,8 +39,10 @@ public class Ibadah extends Fragment {
         mViewPager = (ViewPager) v.findViewById(R.id.containers);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tabs);
+        tabLayout = (TabLayout) v.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
+        tabLayout.setTabTextColors(getResources().getColor(R.color.abuSedang), getResources().getColor(R.color.colorPrimary));
 
         return v;
     }
@@ -47,7 +52,6 @@ public class Ibadah extends Fragment {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
         @Override
         public Fragment getItem(int position) {
             switch (position) {
