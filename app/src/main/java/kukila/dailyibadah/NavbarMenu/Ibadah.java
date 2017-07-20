@@ -41,6 +41,7 @@ public class Ibadah extends Fragment {
 
         tabLayout = (TabLayout) v.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.setBackgroundColor(getResources().getColor(R.color.grey));
         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
         tabLayout.setTabTextColors(getResources().getColor(R.color.abuSedang), getResources().getColor(R.color.colorPrimary));
 
