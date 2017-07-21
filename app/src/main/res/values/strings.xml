@@ -58,5 +58,6 @@
     <string name="title_activity_menu_ibadah">MenuIbadah</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_fragment_ibadah_list">fragment_ibadah_list</string>
+    <string name="title_activity_date_header">DateHeader</string>
 
 </resources>
