@@ -1,6 +1,5 @@
-package kukila.dailyibadah.NavbarMenu;
+package kukila.dailyibadah.BarMenu;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,49 +11,52 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import kukila.dailyibadah.Adapter.InfoAdapter;
-import kukila.dailyibadah.Adapter.model.InfoModel;
-import kukila.dailyibadah.BarMenu.DetailsInfo;
+import kukila.dailyibadah.Adapter.GrafikDetailIbadahAdapter;
+import kukila.dailyibadah.Adapter.IbadahAdapter;
+import kukila.dailyibadah.Adapter.model.GrafikDetailIbadahModel;
+import kukila.dailyibadah.Adapter.model.IbadahWajibModel;
 import kukila.dailyibadah.R;
 
 /**
- * Created by Mindha on 13/07/2017.
+ * Created by Mindha on 24/07/2017.
  */
 
-public class Info extends Fragment {
+public class ListGrafikAll extends Fragment {
     View myView;
-    private static InfoAdapter adapter;
-    ArrayList<InfoModel> dataModels;
+
+    private static GrafikDetailIbadahAdapter adapter;
+    ArrayList<GrafikDetailIbadahModel> dataModels;
     ListView listViewMessage;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.fragment_info, container, false);
-        getActivity().setTitle("Info");
-        listViewMessage = (ListView) myView.findViewById(R.id.listInfo);
+        myView = inflater.inflate(R.layout.activity_grafik_all,container,false);
+        listViewMessage = (ListView) myView.findViewById(R.id.list_detail_semua);
         dummyInfo();
         initAdapter();
+
         return myView;
     }
 
     public void dummyInfo() {
         dataModels = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            dataModels.add(new InfoModel(i, "Ibadah " + (i + 1)));
+            int n = 80;
+
+            dataModels.add(new GrafikDetailIbadahModel(i, n,"Nama Shalat"));
         }
     }
 
 
     public void initAdapter() {
-        adapter = new InfoAdapter(dataModels, getActivity().getApplicationContext());
+        adapter = new GrafikDetailIbadahAdapter(dataModels, getActivity().getApplicationContext());
         listViewMessage.setAdapter(adapter);
         listViewMessage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                InfoModel dataModel = dataModels.get(position);
-                Intent intent = new Intent(getActivity(), DetailsInfo.class);
-                startActivity(intent);
+                GrafikDetailIbadahModel dataModel = dataModels.get(position);
+
             }
         });
 

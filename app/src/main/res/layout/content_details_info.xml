@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kukila.dailyibadah.BarMenu.DetailsInfo">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="120dp"
+    android:gravity="center_vertical"
+    android:padding="@dimen/margin20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Judul Info"
+        android:textSize="@dimen/margin20"/>
+
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin20">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_badah"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@color/abuSedang"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="@string/waktu_pelaksanaan"
+                android:textColor="@color/abuSedang"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                android:text="Minimal 2 Rakaat, Maksimal 12 Rakaat"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="@string/jumlah_rakaat"
+                android:textColor="@color/abuSedang"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                android:text="06.30 - 10.30"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@color/abuSedang"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="@string/hadits"
+                android:textColor="@color/abuSedang"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/appbar_padding_top"
+                android:text="@string/desc_hadits"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

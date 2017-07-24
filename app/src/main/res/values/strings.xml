@@ -59,5 +59,12 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_fragment_ibadah_list">fragment_ibadah_list</string>
     <string name="title_activity_date_header">DateHeader</string>
+    <string name="title_activity_details_info">DetailsInfo</string>
+
+    <string name="desc_badah">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="waktu_pelaksanaan">Waktu Pelaksanaan</string>
+    <string name="jumlah_rakaat">Jumlah Rakaat</string>
+    <string name="hadits">Hadits</string>
+    <string name="desc_hadits">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
 
 </resources>
