@@ -17,30 +17,29 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="UBAH LOKASI"
                 android:background="#EEEEEE"
                 android:padding="@dimen/margin20"
+                android:text="UBAH LOKASI"
                 android:textColor="#757575"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/ubah_lokasi"
-                android:padding="@dimen/margin20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#757575"
+                android:padding="@dimen/margin20"
                 android:text="Lokasi saat ini"
-                android:textSize="15dp"
-                />
+                android:textColor="#757575"
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PILIH METODE KALKULASI"
                 android:background="#EEEEEE"
                 android:padding="@dimen/margin20"
+                android:text="PILIH METODE KALKULASI"
                 android:textColor="#757575"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
 
             <ListView
@@ -53,18 +52,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PILIH METODE JURISTIK"
                 android:background="#EEEEEE"
                 android:padding="@dimen/margin20"
+                android:text="PILIH METODE JURISTIK"
                 android:textColor="#757575"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
 
             <ListView
                 android:id="@+id/listJuristik"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                />
+                android:layout_height="210dp" />
 
         </LinearLayout>
     </ScrollView>

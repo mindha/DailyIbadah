@@ -1,0 +1,48 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        >
+        <ImageView
+            android:id="@+id/closeaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_clear_black_24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#616161"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="21dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_vertical"
+            android:text="Ubah Lokasi"/>
+
+        <Button
+            android:id="@+id/otomatis_lokasi"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/otomatis_lokasi"
+            android:textColor="@android:color/white"/>
+        <Button
+            android:id="@+id/manual_lokasi"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_lokasi"/>
+
+    </LinearLayout>
+</RelativeLayout>

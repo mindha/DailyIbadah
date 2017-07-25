@@ -6,8 +6,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import kukila.dailyibadah.LoginActivity;
 import kukila.dailyibadah.R;
@@ -21,14 +23,19 @@ public class DetailsInfo extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.setTitle("Detail Info");
-        onBackPressed();
 
     }
 
 
     @Override
     public void onBackPressed() {
-        return;
+        finish();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        finish();
+
+        return true;
+    }
 }

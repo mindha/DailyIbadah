@@ -67,4 +67,18 @@
     <string name="hadits">Hadits</string>
     <string name="desc_hadits">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
 
+    <!-- Pop Up Laporan Sholat-->
+    <string name="waktu_shalat">WAKTU SHOLAT</string>
+    <string name="jenis_shalat">JENIS SHALAT</string>
+    <string name="tempat_shalat">TEMPAT SHALAT</string>
+    <string name="masukan_shalat">MASUKAN WAKTU</string>
+    <string name="jumlah_rakaath">JUMLAH RAKAAT</string>
+    <string name="pilih_shalat">PILIH SHALAT</string>
+    <string name="otomatis_lokasi">TENTUKAN LOKASI SAYA</string>
+    <string name="manual_lokasi">PILIH LOKASI MANUAL</string>
+    <string name="shalat_qabliyah">SHALAT QABLIYAH</string>
+    <string name="shalat_badiyah">SHALAT BADIYAH</string>
+    <string name="iya">Iya</string>
+    <string name="tidak">Tidak</string>
+
 </resources>
