@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jenis_shalat_array">
+        <item>Jamaah</item>
+        <item>Munfarid</item>
+    </string-array>
+
+    <string-array name="tempat_shalat_array">
+        <item>Masjid</item>
+        <item>Rumah</item>
+    </string-array>
+
+    <string-array name="pilih_shalat_array">
+        <item>Sholat Dhuha</item>
+        <item>Sholat Tahajud</item>
+        <item>Sholat Witir</item>
+        <item>Sholat Tarawih</item>
+        <item>Sholat Gerhana</item>
+        <item>Sholat Tasbih</item>
+    </string-array>
+
+    <string-array name="rakaat_shalat_array">
+        <item>2 Rakaat</item>
+        <item>4 Rakaat</item>
+        <item>3 Rakaat</item>
+        <item>8 Rakaat</item>
+        <item>10 Rakaat</item>
+        <item>12 Rakaat</item>
+    </string-array>
+</resources>

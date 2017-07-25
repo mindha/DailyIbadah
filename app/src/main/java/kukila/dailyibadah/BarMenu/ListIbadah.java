@@ -1,5 +1,6 @@
 package kukila.dailyibadah.BarMenu;
 
+import android.app.Dialog;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,8 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -24,6 +29,7 @@ import kukila.dailyibadah.R;
 public class ListIbadah extends Fragment {
     View myView;
 
+    private Dialog dialog;
     private static IbadahAdapter adapter;
     ArrayList<IbadahWajibModel> dataModels;
     ListView listViewMessage;
@@ -40,10 +46,11 @@ public class ListIbadah extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                dialogTambahShalat();
+
             }
         });
+
         return myView;
     }
 
@@ -66,6 +73,53 @@ public class ListIbadah extends Fragment {
 
             }
         });
-
     }
+
+    public void dialogTambahShalat(){
+        dialog = new Dialog(getActivity());  // always give context of activity.
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_tambah_shalat);
+        ImageView image = (ImageView) dialog.findViewById(R.id.closeaja);
+
+        Spinner spinner_pilih = (Spinner) dialog.findViewById(R.id.pilih_shalat);
+        spinner_pilih.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),R.array.pilih_shalat_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_pilih.setAdapter(adapter);
+
+        Spinner spinner_jumlah = (Spinner) dialog.findViewById(R.id.jumlah_rakaat);
+        spinner_jumlah.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.rakaat_shalat_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_jumlah.setAdapter(adapter2);
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 }
+
