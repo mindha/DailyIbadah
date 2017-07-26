@@ -6,7 +6,15 @@ package kukila.dailyibadah.Adapter.model;
 
 public class IbadahWajibModel {
     int id;
-    String namaIbadah, waktu, menit;
+    String namaIbadah, waktu, menit, kategori;
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 
     public int getId() {
         return id;
@@ -32,12 +40,13 @@ public class IbadahWajibModel {
         this.menit = menit;
     }
 
-    public IbadahWajibModel(int id, String namaIbadah, String waktu, String menit) {
+    public IbadahWajibModel(int id, String namaIbadah, String waktu, String menit, String kategori) {
 
         this.id = id;
         this.namaIbadah = namaIbadah;
         this.waktu = waktu;
         this.menit = menit;
+        this.kategori = kategori;
     }
 
     public IbadahWajibModel(String namaIbadah) {

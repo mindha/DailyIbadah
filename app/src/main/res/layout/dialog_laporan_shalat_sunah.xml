@@ -20,6 +20,7 @@
             android:src="@drawable/ic_clear_black_24dp"/>
 
         <TextView
+            android:id="@+id/sholat_sunah"
             android:layout_width="match_parent"
             android:textColor="#616161"
             android:layout_height="wrap_content"
@@ -27,33 +28,7 @@
             android:textSize="21dp"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
             android:layout_gravity="center_vertical"
-            android:text="Tambah Shalat"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="@string/pilih_shalat"/>
-
-        <Spinner
-            android:id="@+id/pilih_shalat"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:text="@string/jumlah_rakaath"/>
-
-        <Spinner
-            android:id="@+id/jumlah_rakaat"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
+            android:text="Shalat Sunnah"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -67,9 +42,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/jenis_shalat"/>
+
+        <Spinner
+            android:id="@+id/jenis_shalat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/tempat_shalat"/>
+
+        <Spinner
+            android:id="@+id/tempat_shalat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
         <Button
-            android:id="@+id/tambah"
-            android:layout_marginTop="20dp"
+            android:id="@+id/simpan"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
@@ -77,4 +78,5 @@
             android:textColor="@android:color/white"/>
 
     </LinearLayout>
+
 </RelativeLayout>

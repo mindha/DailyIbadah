@@ -36,8 +36,8 @@ public class DateHeader extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_ibadah, container, false);
 
-        mViewPager = (ViewPager) v.findViewById(R.id.header);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
+//        mViewPager = (ViewPager) v.findViewById(R.id.header);
+//        mViewPager.setAdapter(mSectionsPagerAdapter);
 
         return v;
     }

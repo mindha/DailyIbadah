@@ -65,13 +65,13 @@ public class Grafik extends Fragment {
                     ListGrafikAll tab1 = new ListGrafikAll();
                     return tab1;
                 case 1:
-                    Puasa tab2 = new Puasa();
+                    ListGrafikAll tab2 = new ListGrafikAll();
                     return tab2;
                 case 2:
-                    Sedekah tab3 = new Sedekah();
+                    ListGrafikAll tab3 = new ListGrafikAll();
                     return tab3;
                 case 3:
-                    Sedekah tab4 = new Sedekah();
+                    ListGrafikAll tab4 = new ListGrafikAll();
                     return tab4;
                 default:
                     return null;

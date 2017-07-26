@@ -31,7 +31,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginTop="40dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/icon"
@@ -62,15 +62,19 @@
                     android:textColor="@android:color/white"
                     android:layout_height="wrap_content"
                     android:text="@string/facebook"
-                    android:background="@color/facebook"/>
+                    android:paddingLeft="@dimen/margin20"
+                    android:drawableLeft="@drawable/ic_facebook"
+                    android:background="@drawable/facebook"/>
                 <Button
                     android:layout_marginTop="@dimen/margin20"
                     android:layout_width="150dp"
+                    android:paddingLeft="@dimen/margin20"
                     android:textColor="@android:color/white"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_google"
                     android:text="@string/google"
                     android:layout_alignParentRight="true"
-                    android:background="@color/google"/>
+                    android:background="@drawable/google"/>
 
             </RelativeLayout>
 
@@ -115,7 +119,7 @@
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/button_background"
                 android:textColor="@android:color/white"
                 android:text="@string/action_sign_in"
                 android:layout_marginBottom="@dimen/margin20"

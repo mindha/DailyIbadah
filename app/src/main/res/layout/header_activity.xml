@@ -9,17 +9,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/tgl"
         android:text="08"
+        android:textColor="@android:color/white"
         android:textSize="50dp"
         android:textAlignment="center"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:id="@+id/date"
         android:text="November, 2016"
         android:textSize="20dp"
         android:textAlignment="center"/>
     <TextView
         android:layout_width="match_parent"
+        android:textColor="@android:color/white"
         android:layout_height="wrap_content"
         android:id="@+id/syawal"
         android:layout_marginTop="5dp"

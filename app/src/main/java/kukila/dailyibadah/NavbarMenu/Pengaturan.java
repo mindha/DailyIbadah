@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ import kukila.dailyibadah.R;
 
 public class Pengaturan extends Fragment {
     View myView;
-    TextView ubahLoc;
+    LinearLayout loc;
     private Dialog dialog;
 
     @Nullable
@@ -32,14 +33,15 @@ public class Pengaturan extends Fragment {
         kalkulasi();
         juristik();
 
-        ubahLoc = (TextView)myView.findViewById(R.id.ubah_lokasi);
+        loc = (LinearLayout)myView.findViewById(R.id.loc);
 
-        ubahLoc.setOnClickListener(new View.OnClickListener() {
+        loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 popUplokasi();
             }
         });
+
         return myView;
 
     }

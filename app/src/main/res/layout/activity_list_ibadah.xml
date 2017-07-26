@@ -14,11 +14,50 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_add_black_24dp"
         android:tint="@android:color/white"/>
-
-    <ListView
-        android:id="@+id/listIbadahShalat"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHALAT WAJIB"
+                android:background="@color/colorAccent"
+                android:padding="@dimen/margin20"
+                android:textColor="@android:color/white"
+                android:textSize="12dp"/>
+
+            <ListView
+                android:id="@+id/listIbadahShalat"
+                android:layout_width="match_parent"
+                android:layout_height="465dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHALAT SUNNAH"
+                android:background="@color/colorAccent"
+                android:padding="@dimen/margin20"
+                android:textColor="@android:color/white"
+                android:textSize="12dp"/>
+
+            <ListView
+                android:id="@+id/listIbadahShalatSunnah"
+                android:layout_width="match_parent"
+                android:layout_height="465dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

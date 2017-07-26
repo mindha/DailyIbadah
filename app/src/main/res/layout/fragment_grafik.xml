@@ -29,15 +29,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 android:text="Faiz Al Qurni"/>
             <TextView
+                android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
-                android:text="faizalqurni@gmail.com"/>
+                android:text="Bandung, Indonesia"/>
         </LinearLayout>
     </LinearLayout>
 

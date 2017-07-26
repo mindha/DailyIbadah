@@ -67,13 +67,14 @@ tools:context="kukila.dailyibadah.PraLocation"
         android:text="@string/set_location_otomatis"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/margin20"
         android:layout_marginBottom="16dp"/>
 
 
 
     <Button
         android:id="@+id/btn_manual"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background_white"
