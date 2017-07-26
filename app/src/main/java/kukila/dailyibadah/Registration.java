@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class Registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private TextView login;
     @Override
@@ -21,6 +21,14 @@ public class Registration extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.setTitle("Buat Akun");
+
+
+        Spinner spinner = (Spinner) findViewById(R.id.jenis_kelamin);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.jenis_kelamin_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
 
         login = (TextView) findViewById(R.id.masuk);
         login.setOnClickListener(new View.OnClickListener() {
@@ -47,5 +55,15 @@ public class Registration extends AppCompatActivity {
         finish();
 
         return true;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

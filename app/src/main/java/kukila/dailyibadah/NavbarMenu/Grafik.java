@@ -34,7 +34,8 @@ public class Grafik extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.fragment_grafik,container,false);
-        getActivity().setTitle("Grafik Ibadah");
+        getActivity().setTitle("Grafik Istiqomah");
+
 
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getChildFragmentManager());

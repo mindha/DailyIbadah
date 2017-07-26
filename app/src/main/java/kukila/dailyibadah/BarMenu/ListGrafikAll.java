@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,7 @@ public class ListGrafikAll extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.activity_grafik_all,container,false);
         listViewMessage = (ListView) myView.findViewById(R.id.list_detail_semua);
+        dropdownList();
         dummyInfo();
         initAdapter();
 
@@ -60,6 +63,23 @@ public class ListGrafikAll extends Fragment {
             }
         });
 
+    }
+
+    public void dropdownList(){
+        Spinner spinner_jumlah = (Spinner) myView.findViewById(R.id.periode);
+        spinner_jumlah.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.periode_array, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_jumlah.setAdapter(adapter2);
     }
 
 }

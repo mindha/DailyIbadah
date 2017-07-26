@@ -91,6 +91,7 @@ public class ListIbadah extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
         });
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),R.array.pilih_shalat_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -108,7 +109,7 @@ public class ListIbadah extends Fragment {
             }
         });
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.rakaat_shalat_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_jumlah.setAdapter(adapter2);
 
         image.setOnClickListener(new View.OnClickListener() {

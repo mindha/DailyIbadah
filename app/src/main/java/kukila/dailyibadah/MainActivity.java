@@ -1,5 +1,6 @@
 package kukila.dailyibadah;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -108,6 +109,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_pengaturan) {
             Fragment tab1 = new Pengaturan();
             changeFragment(tab1);
+
+        }else if (id == R.id.nav_logout) {
+            Intent intent = (new Intent(this,LoginActivity.class));
+            startActivity(intent);
 
         }
 

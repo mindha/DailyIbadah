@@ -39,6 +39,8 @@ public class Ibadah extends Fragment {
         mViewPager = (ViewPager) v.findViewById(R.id.containers);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
+
         tabLayout = (TabLayout) v.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         tabLayout.setBackgroundColor(getResources().getColor(R.color.grey));

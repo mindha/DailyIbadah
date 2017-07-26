@@ -37,7 +37,7 @@
             android:text="@string/pilih_shalat"/>
 
         <Spinner
-            android:id="@+id/jumlah_rakaat"
+            android:id="@+id/pilih_shalat"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
         </Spinner>
@@ -50,7 +50,7 @@
             android:text="@string/jumlah_rakaat"/>
 
         <Spinner
-            android:id="@+id/pilih_shalat"
+            android:id="@+id/jumlah_rakaat"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
         </Spinner>

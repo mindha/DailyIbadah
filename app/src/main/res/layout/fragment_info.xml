@@ -13,5 +13,4 @@ android:background="@android:color/white"
     android:layout_height="match_parent"
     />
 
-
 </RelativeLayout>

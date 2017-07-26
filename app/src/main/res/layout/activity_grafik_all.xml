@@ -33,12 +33,23 @@
                         android:text="10 July - 16 July 2017"/>
 
                 </LinearLayout>
-                <Spinner
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:background="@drawable/button_background_white"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/periode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
 
-                </Spinner>
+                    </Spinner>
+                </RelativeLayout>
+
 
 
             </LinearLayout>
@@ -60,7 +71,7 @@
             <ListView
                 android:id="@+id/list_detail_semua"
                 android:layout_width="match_parent"
-                android:layout_height="210dp">
+                android:layout_height="250dp">
             </ListView>
         </LinearLayout>
     </ScrollView>
