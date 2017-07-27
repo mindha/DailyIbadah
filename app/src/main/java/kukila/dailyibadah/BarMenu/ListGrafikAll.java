@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -61,15 +62,29 @@ public class ListGrafikAll extends Fragment {
         series.setDrawDataPoints(true);
         series.setDataPointsRadius(16);
     }
+    public void generateGraph(){
+        GraphView graphView = (GraphView)myView.findViewById(R.id.graph);
+        graphView.removeAllSeries();
+        graphView.setBackgroundColor(getResources().getColor(android.R.color.white));
 
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(getDataPoint());
+        graphView.addSeries(series);
+
+        series.setColor(getResources().getColor(R.color.colorPrimary));
+        series.setThickness(10);
+        series.setDrawBackground(true);
+        series.setBackgroundColor(Color.argb(60,95,226,156));
+        series.setDrawDataPoints(true);
+        series.setDataPointsRadius(16);
+    }
     private DataPoint[] getDataPoint() {
         DataPoint[] dp = new DataPoint[]
                 {
-                        new DataPoint(0,1),
-                        new DataPoint(2,5),
-                        new DataPoint(3,1),
-                        new DataPoint(5,6),
-                        new DataPoint(8,3)
+                        new DataPoint((int )(Math.random() * 5 + 1),(int )(Math.random() * 8 + 5)),
+                        new DataPoint((int )(Math.random() * 11 + 8),(int )(Math.random() * 14 + 11)),
+                        new DataPoint((int )(Math.random() * 17 + 14),(int )(Math.random() * 20 + 17)),
+                        new DataPoint((int )(Math.random() * 23 + 20),(int )(Math.random() * 26 + 23)),
+                        new DataPoint((int )(Math.random() * 29 + 26),(int )(Math.random() * 32 + 29))
                 };
         return (dp);
     }
@@ -91,7 +106,6 @@ public class ListGrafikAll extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 GrafikDetailIbadahModel dataModel = dataModels.get(position);
-
             }
         });
 
@@ -102,6 +116,8 @@ public class ListGrafikAll extends Fragment {
         spinner_jumlah.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
+//                Toast.makeText(getActivity().getApplicationContext(), String.valueOf(position), Toast.LENGTH_SHORT).show();
+                generateGraph();
             }
 
             @Override
