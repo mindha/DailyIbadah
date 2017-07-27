@@ -1,0 +1,65 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#616161"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="21dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_vertical"
+            android:text="Ubah Waktu"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/time_awal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+                </Spinner>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textStyle="bold"/>
+                <Spinner
+                    android:id="@+id/time_akhir"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/otomatis_lokasi"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="SIMPAN"
+            android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

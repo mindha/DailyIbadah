@@ -1,14 +1,18 @@
 package kukila.dailyibadah.NavbarMenu;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -25,6 +29,8 @@ import kukila.dailyibadah.R;
  */
 
 public class Notifikasi extends Fragment {
+
+    private Dialog dialog;
     View myView;
     private static IbadahSunnahAdapter adapter;
     ArrayList<IbadahSunnahModel> dataModels;
@@ -32,6 +38,7 @@ public class Notifikasi extends Fragment {
     ArrayList<IbadahWajibModel> dataModelsWajib;
     ListView listViewIbadahSunnah, listViewIbadahWajib;
 
+    private ImageView time;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +50,16 @@ public class Notifikasi extends Fragment {
         initAdapterWajib();
         dummySunnah();
         initAdapter();
+
+        time = (ImageView)myView.findViewById(R.id.time);
+
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogLaporanShalatSunnah();
+            }
+        });
+
         return myView;
 
     }
@@ -87,5 +104,45 @@ public class Notifikasi extends Fragment {
             }
         });
 
+    }
+
+    private void dialogLaporanShalatSunnah(){
+        dialog = new Dialog(getActivity());  // always give context of activity.
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_time);
+
+        Spinner spinner_jenis = (Spinner) dialog.findViewById(R.id.time_awal);
+        spinner_jenis.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),R.array.time_awal, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_jenis.setAdapter(adapter);
+
+        Spinner spinner_tempat = (Spinner) dialog.findViewById(R.id.time_akhir);
+        spinner_tempat.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(),R.array.time_akhir, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_tempat.setAdapter(adapter2);
+
+
+        dialog.show();
     }
 }

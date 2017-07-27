@@ -59,8 +59,7 @@ public class ListIbadah extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogTambahShalat();
-
+                DialogTambah();
             }
         });
 
@@ -297,10 +296,30 @@ public class ListIbadah extends Fragment {
             public void onClick(DialogInterface dialog, int id) {
                 //TODO
                 if(kategori == "wajib"){
-                dialogSholatWajib();}
-                else{
+                    dialogSholatWajib();
+                }else {
                     dialogLaporanShalatSunnah();
                 }
+            }
+        });
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                //TODO
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void DialogTambah() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Apakah Anda ingin menambahkan ibadah sunnah?");
+        builder.setPositiveButton("Iya", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                    dialogTambahShalat();
+
             }
         });
         builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {

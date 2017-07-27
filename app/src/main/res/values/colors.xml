@@ -2,6 +2,8 @@
 <resources>
     <color name="colorPrimary">#24c37f</color>
     <color name="colorPrimaryDark">#15a868</color>
+    <color name="shadowGraph">#B9F6CA</color>
+
     <color name="colorAccent">#21c27c</color>
     <color name="facebook">#49629f</color>
     <color name="abuLight">#E0E0E0</color>

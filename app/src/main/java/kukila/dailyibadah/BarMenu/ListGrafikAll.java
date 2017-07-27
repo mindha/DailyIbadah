@@ -1,5 +1,6 @@
 package kukila.dailyibadah.BarMenu;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 
@@ -36,10 +41,37 @@ public class ListGrafikAll extends Fragment {
         myView = inflater.inflate(R.layout.activity_grafik_all,container,false);
         listViewMessage = (ListView) myView.findViewById(R.id.list_detail_semua);
         dropdownList();
+        graphIbadah();
         dummyInfo();
         initAdapter();
 
         return myView;
+    }
+
+    public void graphIbadah(){
+        GraphView graphView = (GraphView)myView.findViewById(R.id.graph);
+
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(getDataPoint());
+        graphView.addSeries(series);
+
+        series.setColor(getResources().getColor(R.color.colorPrimary));
+        series.setThickness(10);
+        series.setDrawBackground(true);
+        series.setBackgroundColor(Color.argb(60,95,226,156));
+        series.setDrawDataPoints(true);
+        series.setDataPointsRadius(16);
+    }
+
+    private DataPoint[] getDataPoint() {
+        DataPoint[] dp = new DataPoint[]
+                {
+                        new DataPoint(0,1),
+                        new DataPoint(2,5),
+                        new DataPoint(3,1),
+                        new DataPoint(5,6),
+                        new DataPoint(8,3)
+                };
+        return (dp);
     }
 
     public void dummyInfo() {
