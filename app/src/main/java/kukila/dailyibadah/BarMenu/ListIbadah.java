@@ -21,6 +21,7 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import kukila.dailyibadah.Adapter.IbadahAdapter;
@@ -68,10 +69,11 @@ public class ListIbadah extends Fragment {
 
     public void dummyInfo() {
         dataModels = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            //public IbadahWajibModel(int id, String namaIbadah, String waktu, String menit)
-            dataModels.add(new IbadahWajibModel(i,"Shalat Wajib",(i+2)+"0 Menit yang lalu","12.34","wajib"));
-        }
+        dataModels.add(new IbadahWajibModel(0,"Shalat Subuh","7 jam 16 menit yang lalu","04.23","wajib"));
+        dataModels.add(new IbadahWajibModel(1,"Shalat Dzuhur","Beberapa Menit yang lalu","11.39","wajib"));
+        dataModels.add(new IbadahWajibModel(2,"Shalat Ashar","3 jam 27 menit lagi","14.59","wajib"));
+        dataModels.add(new IbadahWajibModel(3,"Shalat Maghrib","6 jam 7 menit lagi","17.32","wajib"));
+        dataModels.add(new IbadahWajibModel(4,"Shalat Isya","7 jam 20 menit lagi","18.44","wajib"));
 
     }
 

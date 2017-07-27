@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
     private static class ViewHolder {
         TextView textJudulIbadahWajib,menit,waktu;
         LinearLayout itemIbadah;
+        RelativeLayout backgroundnya;
 
     }
     IbadahAdapter.ViewHolder viewHolder;
@@ -44,6 +46,7 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
             viewHolder = new IbadahAdapter.ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(mContext);
             convertView = inflater.inflate(R.layout.item_ibadah, parent, false);
+            viewHolder.backgroundnya = (RelativeLayout)convertView.findViewById(R.id.rv_background);
             viewHolder.itemIbadah= (LinearLayout) convertView.findViewById(R.id.item_ibadah_list);
             viewHolder.textJudulIbadahWajib= (TextView) convertView.findViewById(R.id.nama_ibadah);
             viewHolder.menit= (TextView) convertView.findViewById(R.id.waktu_ibadah);
@@ -58,6 +61,7 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
 
         lastPosition = position;
 
+        viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuSedang));
         viewHolder.itemIbadah.setVisibility(View.VISIBLE);
         viewHolder.textJudulIbadahWajib.setText(dataModel.getNamaIbadah());
         viewHolder.menit.setText(dataModel.getWaktu());
