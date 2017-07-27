@@ -60,8 +60,11 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
         }
 
         lastPosition = position;
+        if (lastPosition == 1){
+            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuSedang));
 
-        viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuSedang));
+        }
+
         viewHolder.itemIbadah.setVisibility(View.VISIBLE);
         viewHolder.textJudulIbadahWajib.setText(dataModel.getNamaIbadah());
         viewHolder.menit.setText(dataModel.getWaktu());
