@@ -17,8 +17,11 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 
 import java.lang.reflect.Array;
@@ -53,8 +56,14 @@ public class ListIbadah extends Fragment {
         listViewSunnah = (ListView) myView.findViewById(R.id.listIbadahShalatSunnah);
         dummyInfo();
         initAdapter();
+
         dummyIbadahSunnah();
         AdapterSunnah();
+
+        ScrollView sv = (ScrollView)myView.findViewById(R.id.sc_scroll);
+        RelativeLayout ln = (RelativeLayout)myView.findViewById(R.id.sc_relative);
+        sv.scrollTo(0,ln.getTop());
+
 
 
 
