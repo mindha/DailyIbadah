@@ -56,7 +56,9 @@ public class ListIbadah extends Fragment {
         dummyIbadahSunnah();
         AdapterSunnah();
 
-        FloatingActionButton fab = (FloatingActionButton) myView.findViewById(R.id.fab);
+
+
+        ImageView fab = (ImageView) myView.findViewById(R.id.add_ibadah);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +87,9 @@ public class ListIbadah extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 IbadahWajibModel dataModel = dataModels.get(position);
-                createAndShowAlertDialog(dataModel.getKategori());
+                if(position == 2) {
+                    createAndShowAlertDialog(dataModel.getKategori());
+                }
 
             }
         });

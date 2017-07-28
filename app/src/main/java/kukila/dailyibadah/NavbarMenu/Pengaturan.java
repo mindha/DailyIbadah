@@ -23,6 +23,7 @@ import kukila.dailyibadah.R;
 public class Pengaturan extends Fragment {
     View myView;
     LinearLayout loc;
+
     private Dialog dialog;
 
     @Nullable
@@ -34,6 +35,22 @@ public class Pengaturan extends Fragment {
         juristik();
 
         loc = (LinearLayout)myView.findViewById(R.id.loc);
+        ImageView im_kal =(ImageView)myView.findViewById(R.id.ask_kalkulasi);
+        ImageView im_jur =(ImageView)myView.findViewById(R.id.ask_juristik);
+
+        im_kal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popUpKalkulasi();
+            }
+        });
+
+        im_jur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popUpJuristik();
+            }
+        });
 
         loc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +90,36 @@ public class Pengaturan extends Fragment {
         ImageView image = (ImageView) dialog.findViewById(R.id.closeaja);
 
 
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    public void popUpKalkulasi(){
+        dialog = new Dialog(getActivity());  // always give context of activity.
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_info_metode_kalkulasi);
+        ImageView image = (ImageView) dialog.findViewById(R.id.closeaja);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    public void popUpJuristik(){
+        dialog = new Dialog(getActivity());  // always give context of activity.
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_info_metode_juristik);
+        ImageView image = (ImageView) dialog.findViewById(R.id.closeaja);
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

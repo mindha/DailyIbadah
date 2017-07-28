@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -45,6 +47,10 @@ public class ListGrafikAll extends Fragment {
         graphIbadah();
         dummyInfo();
         initAdapter();
+
+        ScrollView sv = (ScrollView)myView.findViewById(R.id.sc_scroll);
+        LinearLayout ln = (LinearLayout)myView.findViewById(R.id.sc_linier);
+        sv.scrollTo(0,ln.getTop());
 
         return myView;
     }

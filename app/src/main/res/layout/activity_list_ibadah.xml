@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_add_black_24dp"
-        android:tint="@android:color/white"/>
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -39,14 +31,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="465dp"
                 />
-            <TextView
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SHALAT SUNNAH"
                 android:background="@color/colorAccent"
                 android:padding="@dimen/margin20"
-                android:textColor="@android:color/white"
-                android:textSize="12dp"/>
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="SHALAT SUNNAH"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"/>
+                <ImageView
+                    android:id="@+id/add_ibadah"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:tint="@android:color/white"
+                    android:layout_marginLeft="180dp"
+                    android:src="@drawable/ic_add_circle_black_24dp"/>
+
+            </LinearLayout>
 
             <ListView
                 android:id="@+id/listIbadahShalatSunnah"

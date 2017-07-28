@@ -80,5 +80,16 @@
     <string name="shalat_badiyah">SHALAT BADIYAH</string>
     <string name="iya">Iya</string>
     <string name="tidak">Tidak</string>
+    
+    <string name="kal_1">Didalam dunia Islam terdapat Keragaman Metode dalam perhitungan Jadwal Waktu Sholat, dimana perbedaan ini seharusnya disikapi dengan arif dan tidak menghukumi salah mutlak bagi orang-orang diluar jadwal waktunya.</string>
+    <string name="kal_2">Metode yang digunakan untuk menghitung waktu sholat. Tiap wilayah punya metode yang berbeda. </string>
+    <string name="kal_3">Disitu kita dapat memilih negara, kota dan juga metode perhitungan yang mahsyur di dunia dan negara-negara islam meliputi</string>
+    <string name="kal_4">1. Metode Universitas Umul Qurro</string>
+    <string name="kal_5">2. Metode Rabithah Alam Islamiy</string>
+    <string name="kal_6">3. Metode Universitas Keislaman Karaci</string>
+    <string name="kal_7">4. Metode Dinas Geologi Mesir</string>
+    <string name="kal_8">5. Metode Federasi Islam Amerika Utara</string>
+
+<string name="jur_1">Hanya berpengaruh pada waktu Ashar. Imam Shafii berpendapat waktu Ashar ketika tinggi bayangan sama dengan tinggi benda. Imam Hanafi berpendapat waktu Ashar ketika tinggi bayangan 2 kali tinggi benda</string>
 
 </resources>

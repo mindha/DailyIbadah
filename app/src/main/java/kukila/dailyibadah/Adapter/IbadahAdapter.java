@@ -1,11 +1,13 @@
 package kukila.dailyibadah.Adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
@@ -28,6 +30,7 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
     private static class ViewHolder {
         TextView textJudulIbadahWajib,menit,waktu;
         LinearLayout itemIbadah;
+        ImageView image;
         RelativeLayout backgroundnya;
 
     }
@@ -51,6 +54,7 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
             viewHolder.textJudulIbadahWajib= (TextView) convertView.findViewById(R.id.nama_ibadah);
             viewHolder.menit= (TextView) convertView.findViewById(R.id.waktu_ibadah);
             viewHolder.waktu= (TextView) convertView.findViewById(R.id.time_ibadah);
+            viewHolder.image= (ImageView) convertView.findViewById(R.id.icon_ibadah);
 
             result=convertView;
             convertView.setTag(viewHolder);
@@ -60,17 +64,38 @@ public class IbadahAdapter extends ArrayAdapter<IbadahWajibModel> {
         }
 
         lastPosition = position;
-        if (lastPosition == 1){
-            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuSedang));
-
+        if (lastPosition == 0){
+            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.redLight));
+            viewHolder.textJudulIbadahWajib.setTextColor(mContext.getResources().getColor(R.color.red));
+            viewHolder.menit.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+            viewHolder.waktu.setTextColor(mContext.getResources().getColor(R.color.red));
+            viewHolder.image.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_clear_black_24dp));
+            viewHolder.image.setColorFilter(mContext.getResources().getColor(R.color.red));
+        }else if (lastPosition == 1){
+            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.shadowGraph));
+            viewHolder.textJudulIbadahWajib.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+            viewHolder.image.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_done_black_24dp));
+            viewHolder.image.setColorFilter(mContext.getResources().getColor(R.color.colorPrimary));
+        } else if (lastPosition >=3){
+            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuLight));
+            viewHolder.textJudulIbadahWajib.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+            viewHolder.menit.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+            viewHolder.waktu.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+            viewHolder.image.setColorFilter(mContext.getResources().getColor(R.color.abuSedang));
         }
+
+//        if (lastPosition != 1){
+//            viewHolder.backgroundnya.setBackgroundColor(mContext.getResources().getColor(R.color.abuLight));
+//            viewHolder.textJudulIbadahWajib.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+//            viewHolder.menit.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+//            viewHolder.waktu.setTextColor(mContext.getResources().getColor(R.color.abuSedang));
+//            viewHolder.image.setColorFilter(mContext.getResources().getColor(R.color.abuSedang));
+//        }
 
         viewHolder.itemIbadah.setVisibility(View.VISIBLE);
         viewHolder.textJudulIbadahWajib.setText(dataModel.getNamaIbadah());
         viewHolder.menit.setText(dataModel.getWaktu());
         viewHolder.waktu.setText(dataModel.getMenit());
-
-
 
         return convertView;
     }
