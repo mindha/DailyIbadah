@@ -14,6 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.github.amlcurran.showcaseview.OnShowcaseEventListener;
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 import kukila.dailyibadah.NavbarMenu.Grafik;
 import kukila.dailyibadah.NavbarMenu.Ibadah;
@@ -24,6 +29,10 @@ import kukila.dailyibadah.NavbarMenu.Pengaturan;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView nav_view;
+
+    ShowcaseView.Builder showCaseView;
+    final int SHOWCASEVIEW_ID = 28;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +133,6 @@ public class MainActivity extends AppCompatActivity
     public void changeFragment(Fragment fragments){
         FragmentTransaction fragment = getSupportFragmentManager().beginTransaction();
         fragment.replace(R.id.fragment_container, fragments);
-        fragment.commitNow();
+        fragment.commit();
     }
 }

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -24,6 +25,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 
+import com.github.amlcurran.showcaseview.OnShowcaseEventListener;
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -35,7 +40,7 @@ import kukila.dailyibadah.Adapter.model.IbadahWajibModel;
 import kukila.dailyibadah.Adapter.model.InfoModel;
 import kukila.dailyibadah.R;
 
-public class ListIbadah extends Fragment {
+public class ListIbadah extends Fragment implements View.OnClickListener {
     View myView;
 
     private Dialog dialog;
@@ -43,6 +48,7 @@ public class ListIbadah extends Fragment {
 
     private static IbadahAdapter adapter;
     ArrayList<IbadahWajibModel> dataModels;
+    final int SHOWCASEVIEW_ID = 28;
 
     private static ShalatSunnahAdapter adapterSunnah;
     ArrayList<IbadahSunnahModel> dataModelSunnah;
@@ -54,6 +60,9 @@ public class ListIbadah extends Fragment {
         myView = inflater.inflate(R.layout.activity_list_ibadah,container,false);
         listViewMessage = (ListView) myView.findViewById(R.id.listIbadahShalat);
         listViewSunnah = (ListView) myView.findViewById(R.id.listIbadahShalatSunnah);
+
+        showShowCaseView();
+
         dummyInfo();
         initAdapter();
 
@@ -65,8 +74,6 @@ public class ListIbadah extends Fragment {
         sv.scrollTo(0,ln.getTop());
 
 
-
-
         ImageView fab = (ImageView) myView.findViewById(R.id.add_ibadah);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +83,15 @@ public class ListIbadah extends Fragment {
         });
 
         return myView;
+    }
+
+    public void showShowCaseView(){
+        new ShowcaseView.Builder(getActivity())
+                .setTarget(new ViewTarget(myView.findViewById(R.id.listIbadahShalat)))
+                .setContentTitle("Jadwal Ibadah")
+                .setContentText("Klik pada list ibadah untuk melakukan laporan ibadah")
+                .setStyle(R.style.ShowCaseViewStyle)
+                .build();
     }
 
     public void dummyInfo() {
@@ -347,5 +363,9 @@ public class ListIbadah extends Fragment {
         dialog.show();
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
 
